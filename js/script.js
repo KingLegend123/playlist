@@ -16,13 +16,17 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 // Songs
+$( document ).ready(function() {
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
-	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+	title:"rockstar",
+	artist:"post malone",
+	songlink:"https://www.youtube.com/results?search_query=rockstar+post+malone",
+	songlength:"3 minutes"
 }
-
+$('body').append("<p>title: " + mySong.title + "</p>");
+$('body').append("<p>artist: " + mySong.artist + "</p>");
+$('body').append("<p>songlink: " + mySong.songlink + "</p>");
+$('body').append("<p>songlength: " + mySong.songlength + "</p>");
 var myPlayList = [
 	{
 		"title":"24K Magic",
@@ -72,3 +76,5 @@ function addSong(){
   
   
 }
+console.log( "ready!" );
+})
