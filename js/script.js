@@ -23,10 +23,14 @@ var mySong = {
 	songlink:"https://www.youtube.com/results?search_query=rockstar+post+malone",
 	songlength:"3 minutes"
 }
-$('body').append("<p>title: " + mySong.title + "</p>");
-$('body').append("<p>artist: " + mySong.artist + "</p>");
-$('body').append("<p>songlink: " + mySong.songlink + "</p>");
-$('body').append("<p>songlength: " + mySong.songlength + "</p>");
+
+function addSongToList(mySong){                                      
+	$('body').append("<p>title: " + mySong.title + "</p>");
+	$('body').append("<p>artist: " + mySong.artist + "</p>");
+	$('body').append("<p>songlink: " + mySong.songlink + "</p>");
+	$('body').append("<p>songlength: " + mySong.songlength + "</p>");
+} 
+
 var myPlayList = [
 	{
 		"title":"24K Magic",
@@ -53,7 +57,7 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
+  for(var i=0;i<
 
 
 
