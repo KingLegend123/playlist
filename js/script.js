@@ -22,13 +22,14 @@ var mySong = {
 	artist:"post malone",
 	songlink:"https://www.youtube.com/results?search_query=rockstar+post+malone",
 	songlength:"3 minutes"
-}
+};
+
 
 function addSongToList(mySong){                                      
-	$('body').append("<p>title: " + mySong.title + "</p>");
-	$('body').append("<p>artist: " + mySong.artist + "</p>");
-	$('body').append("<p>songlink: " + mySong.songlink + "</p>");
-	$('body').append("<p>songlength: " + mySong.songlength + "</p>");
+	$("#songs").append("<p>title: " + mySong.title + "</p>");
+	$('#songs').append("<p>artist: " + mySong.artist + "</p>");
+	$('#songs').append("<p>songlink: " + mySong.songlink + "</p>");
+	$('#songs').append("<p>songlength: " + mySong.songlength + "</p>");
 } 
 
 var myPlayList = [
@@ -51,13 +52,20 @@ var myPlayList = [
 		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
 	}
 
-]
+];
 
 
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  for(var i=0;i<
+  
+	 $("button").click(function(){
+		var songNameInput= $("#songName").val();
+		var song={
+			title:songNameInput
+		};
+		addSongToList(song);
+	});
 
 
 
